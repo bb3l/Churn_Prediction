@@ -1,0 +1,31 @@
+<!doctype html>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>{% block title %}Project Corner{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section>
+  <header>
+    <div class="topnav">
+      <a class="active" href="{{ url_for('about') }}">Home</a>
+      <a href="{{ url_for('CustomerChurnPredictor') }}">Project 1</a>
+    </div>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+
+
+
+</section>
+
+
+  <footer>
+    <p>Copyright &copy; 2024 ProjectCorner. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+

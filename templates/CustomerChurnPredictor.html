@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Customer Churn Prediction Model{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<p>
+    In order to predict if a customer will churn in the near future,
+    we will define the following features to be used for our model training: </br></br>
+</p>
+
+<p>- Credit score (range from 300-850)</p>
+<p>- Gender (Male = 0, Female =1)</p>
+<p>- Age</p>
+<p>- Tenure(How long they have been with the bank)</p>
+<p>- Account Balance (Amount of money in their account at the time)</p>
+<p>- Number of Products (number of products they own with the bank)</p>
+<p>- Has a credit card? (if the customer has a credit card or not, No=-0, Yes=1)</p>
+<p>- Active member? (if the customer is an active member or not, No=0, Yes=1)</p>
+<p>- Estimated Salary (How much the customer makes at the time)</p>
+
+ <!-- Starts image section -->
+<br> <!-- Line break -->
+<br> <!-- Line break -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="{{url_for('static', filename='age.png')}}" class="gallery__img" width="400"
+                            alt="ChurningAgeDistributionGraph" />
+                <div class="caption">
+                                    
+                   </div>
+            </div>
+        </div>
+      
+    <!-- Ends image section -->
+<br> <!-- Line break -->
+<br> <!-- Line break -->
+    <!-- Starts form section -->
+    <div class="form-container ">
+        <form class="form-horizontal" action = "/predict" method="post">
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="CreditScore">Credit Score:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="CreditScore" name="CreditScore">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="Gender">Gender:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="Gender" name="Gender">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="Age">Age:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="Age" name="Age">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="Tenure">Tenure:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="Tenure" name="Tenure">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="Balance">Account Balance:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="Balance" name="Balance">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="NumOfProducts">Number of Products Owned:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="NumOfProducts" name="NumOfProducts">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="HasCrCard">Do they have a credit card?:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="HasCrCard" name="HasCrCard">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="IsActiveMember">Are they an active member?:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="IsActiveMember" name="IsActiveMember">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="EstimatedSalary">Estimated Salary:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="EstimatedSalary" name="EstimatedSalary">
+              </div>
+            </div>
+
+            <div class="form-group row">
+            <label class="control-label col-sm-2" for="">&nbsp;</label>
+              <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">Predict</button>
+              </div>
+            </div>
+        </form>
+        <!-- Ends form section -->
+
+
+    </div>
+{% endblock %}
