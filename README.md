@@ -1,3 +1,5 @@
+**CHURN PREDICTION MODEL**
+
 The data was downloaded from Kaggle https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers.
 
 It is fictional data about a bank and its customers and whether they churned ('Exited') or not. Churning is when a customer stops using product or services provide by a company, so basically, it is when companies lose customers.
