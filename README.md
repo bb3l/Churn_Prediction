@@ -11,5 +11,9 @@ After that, the model was deployed locally using flask.
 The Flask application was also deployed using Elastic Beanstalk on AWS.
 Here is the link if you wish to interact with it: http://customerchurnprediction-env.eba-tkpjnprr.us-east-2.elasticbeanstalk.com/about
 
+
+Open to suggestions as this was my first time working with Flask and interacting with AWS.
+
+
 This is what it looks like:
 <img width="1504" alt="Screenshot 2024-04-24 at 8 46 30 PM" src="https://github.com/bb3l/Churn_Prediction/assets/124946694/b0768ade-cf90-4402-a77a-4fa558f1fda5">
